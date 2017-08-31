@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RichardSzalay.MockHttp;
 
-using PaymentProcessor.Core.Models;
-using PaymentProcessor.Infrastructure.Factories;
+using PaymentGateway.Core.Models;
+using PaymentGateway.Infrastructure.Factories;
 
-namespace Tests
+namespace PaymentGateway.Tests
 {
     [TestClass]
     public class Tests

@@ -1,6 +1,6 @@
-﻿using PaymentProcessor.Core.Interfaces;
+﻿using PaymentGateway.Core.Interfaces;
 
-namespace PaymentProcessor.Core.Models
+namespace PaymentGateway.Core.Models
 {
     public class PaymentResponse : IPaymentResponse
     {

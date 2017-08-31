@@ -2,11 +2,11 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using PaymentProcessor.Core.Interfaces;
+using PaymentGateway.Core.Interfaces;
 
-namespace PaymentProcessor.Providers
+namespace PaymentGateway.Providers
 {
-    public class Payflow<T1, T2> : IPaymentProcessor<T1, T2> where T1 : IPaymentRequest where T2 : IPaymentResponse
+    public class Payflow<T1, T2> : IPaymentGateway<T1, T2> where T1 : IPaymentRequest where T2 : IPaymentResponse
     {
         public async Task<T2> AuthorizeAsync(HttpClient httpClient, T1 paymentRequest)
         {

@@ -1,8 +1,8 @@
 ﻿using System;
-using PaymentProcessor.Core.Interfaces;
-using PaymentProcessor.Providers;
+using PaymentGateway.Core.Interfaces;
+using PaymentGateway.Providers;
 
-namespace PaymentProcessor.Infrastructure.Factories
+namespace PaymentGateway.Infrastructure.Factories
 {
     public class PaymentProcessorFactory<T1, T2> where T1 : IPaymentRequest where T2 : IPaymentResponse
     {
@@ -13,7 +13,7 @@ namespace PaymentProcessor.Infrastructure.Factories
             _processor = processor;
         }
 
-        public IPaymentProcessor<T1, T2> GetPaymentProcessor()
+        public IPaymentGateway<T1, T2> GetPaymentProcessor()
         {
             switch (_processor)
             {
@@ -22,7 +22,7 @@ namespace PaymentProcessor.Infrastructure.Factories
                 case "vs":
                     return new AmazonPay<T1, T2>();
                 default:
-                    throw new Exception("Unknown PaymentProcessor type requested");
+                    throw new Exception("Unknown PaymentGateway type requested");
             }  
         }
     }

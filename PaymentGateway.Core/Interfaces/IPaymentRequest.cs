@@ -1,4 +1,4 @@
-﻿namespace PaymentProcessor.Core.Interfaces
+﻿namespace PaymentGateway.Core.Interfaces
 {
     public interface IPaymentRequest
     {
